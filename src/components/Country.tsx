@@ -1,11 +1,11 @@
-import React, { useState} from "react";
+import * as React from "react";
 import Button from "react-bootstrap/Button";
 import PropTypes from "prop-types";
 
 import "../styles/Country.css";
 
 function Country (props) {
-    const [selected, changeSelected] = useState(false);
+    const [selected, changeSelected] = React.useState(false);
 
     return (
         <tr className={selected ? "selected-country":""}>
@@ -21,15 +21,16 @@ function Country (props) {
         </tr>
     )
 }
+
 Country.defaultProps = {
     capital: "Not available capital"
 };
 
-Country.propTypes = {
-    country: PropTypes.oneOfType([
-        PropTypes.object,
-        PropTypes.array
-    ])
-};
+// Country.propTypes = {
+//     country: PropTypes.oneOfType([
+//         PropTypes.object,
+//         PropTypes.array
+//     ])
+// };
 
 export default Country;

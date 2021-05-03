@@ -1,5 +1,5 @@
 // import React, { Component } from "react";
-import React, { useState } from "react";
+import * as React from "react";
 import "../styles/Header.css";
 
 // class Header extends Component {
@@ -18,7 +18,7 @@ function Header (props) {
     // let buttonName = "NNName of the Button!";
     let buttonClass = "header__button";
     // let count = 0;
-    let [count, setNewCount] = useState(0);
+    let [count, setNewCount] = React.useState(0);
 
     const buttonClickFunc = (e) => {
         setNewCount(count + 1);
